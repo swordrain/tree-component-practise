@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # my-tree
 
 ## Project setup
@@ -22,3 +23,6 @@ npm run lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+=======
+# tree-component-practise
+>>>>>>> 013b51a2982467d448e738499a293fbef25c776d
