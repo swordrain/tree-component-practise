@@ -1,28 +1,75 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <awesome-tree :nodes="nodes" />
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import AwesomeTree from "./components/AwesomeTree.vue";
 export default {
-  name: 'App',
+  name: "App",
+  data: function () {
+    return {
+      nodes: [
+        {
+          label: "Node1",
+          expand: true,
+          key: "1",
+          children: [
+            {
+              label: "Node1-1",
+              key: "1-1",
+            },
+            {
+              label: "Node1-2",
+              key: "1-2",
+            },
+            {
+              label: "Node1-3",
+              key: "1-3",
+              children: [
+                {
+                  label: "Node1-3-1",
+                  key: "1-3-1",
+                },
+                {
+                  label: "Node1-3-2",
+                  key: "1-3-2",
+                },
+              ],
+            },
+          ],
+        },
+        {
+          label: "Node2",
+          key: "2",
+        },
+        {
+          label: "Node3",
+          expand: false,
+          key: "3",
+          children: [
+            {
+              label: "Node3-1",
+              key: "3-1",
+            },
+            {
+              label: "Node3-2",
+              key: "3-2",
+            },
+            {
+              label: "Node3-3",
+              key: "3-3",
+            },
+          ],
+        },
+      ],
+    };
+  },
   components: {
-    HelloWorld
-  }
-}
+    AwesomeTree,
+  },
+};
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
+<style></style>
